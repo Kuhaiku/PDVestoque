@@ -1,0 +1,22 @@
+{
+  "name": "estoque-pro",
+  "version": "1.0.0",
+  "description": "Sistema de Controle de Estoque com Node.js, Express e MySQL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "estoque",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.10.1"
+  }
+}

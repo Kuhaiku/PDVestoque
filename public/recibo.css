@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container {
+    width: 148mm;
+    height: 210mm;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px; /* Ajustado para caber melhor */
+    height: 100px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+}
+
+.logo span {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.header-text {
+    text-align: right; /* Alinhado à direita para contraste */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header-text p {
+    margin: 4px 0;
+}
+
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.info-line input {
+    border: none;
+    border-bottom: 1px dotted black;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 5px;
+    width: 250px;
+}
+
+.info-line span {
+    text-transform: capitalize;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* ALTERAÇÃO: Removido 'flex-grow: 1' para que a tabela não estique */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px; /* Mais espaçamento */
+    text-align: center;
+    font-size: 14px;
+    height: 25px; /* Altura de linha padrão */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 10%; } /* Quantidade */
+th:nth-child(2), td:nth-child(2) { width: 55%; text-align: left; } /* Descrição */
+th:nth-child(3), td:nth-child(3) { width: 15%; text-align: right; } /* Unitário */
+th:nth-child(4), td:nth-child(4) { width: 20%; text-align: right; } /* Total */
+
+/* NOVO: Classe para o elemento espaçador */
+.spacer {
+    flex-grow: 1;
+}
+
+.total-box {
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+.actions button:hover {
+    filter: brightness(90%);
+}
+
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+    .main-container {
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .actions {
+        display: none;
+    }
+}

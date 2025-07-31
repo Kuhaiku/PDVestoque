@@ -1,0 +1,46 @@
+:root { --primary-color: #007bff; --danger-color: #dc3545; --success-color: #28a745; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f0f2f5; margin: 0; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.hidden { display: none !important; }
+.card { background-color: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+input, select, button { padding: 0.75rem; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
+button { background-color: var(--primary-color); color: white; border: none; cursor: pointer; transition: background-color 0.3s; }
+button:hover { filter: brightness(90%); }
+hr { border: none; border-top: 1px solid #eee; margin: 1rem 0; }
+b, strong { text-transform: capitalize; }
+#app-container { width: 95%; max-width: 1200px; }
+header { display: flex; justify-content: space-between; align-items: center; background-color: #fff; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+header h1 { margin: 0; font-size: 1.5rem; color: var(--primary-color); }
+#user-info { display: flex; align-items: center; gap: 1rem; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
+form { display: flex; flex-direction: column; gap: 1rem; }
+#login-container .card { width: 300px; text-align: center; }
+#logout-button { background-color: var(--danger-color); }
+.btn-success { background-color: var(--success-color); width: 100%; }
+#lista-carrinho { list-style-type: none; padding: 0; max-height: 150px; overflow-y: auto; margin-bottom: 1rem; }
+#lista-carrinho li { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; border-bottom: 1px solid #eee; gap: 10px; }
+#lista-carrinho .item-info { flex-grow: 1; text-align: left; }
+#lista-carrinho .item-subtotal { min-width: 80px; text-align: right; }
+.remove-item-btn { background: none; border: none; color: var(--danger-color); cursor: pointer; font-size: 1.2rem; font-weight: bold; padding: 0 0.5rem; }
+/* NOVO: Estilo para o campo de quantidade no carrinho */
+.cart-item-qty { width: 60px; padding: 5px; text-align: center; }
+.tabs { border-bottom: 2px solid #eee; margin-bottom: 1rem; }
+.tab-button { padding: 0.75rem 1.5rem; border: none; background-color: transparent; cursor: pointer; font-size: 1rem; border-radius: 5px 5px 0 0; }
+.tab-button.active { border-bottom: 2px solid var(--primary-color); font-weight: bold; color: var(--primary-color); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #f8f9fa; text-transform: uppercase; font-size: 0.85rem; }
+tbody tr:hover { background-color: #f1f1f1; }
+.action-buttons button, .print-btn { background: none; border: 1px solid transparent; cursor: pointer; padding: 5px; margin-right: 5px; font-size: 0.9rem; border-radius: 4px; }
+.edit-btn { border-color: var(--primary-color); color: var(--primary-color); }
+.delete-btn { border-color: var(--danger-color); color: var(--danger-color); }
+.print-btn { border-color: #6c757d; color: #6c757d; }
+.edit-btn:hover { background-color: var(--primary-color); color: white; }
+.delete-btn:hover { background-color: var(--danger-color); color: white; }
+.print-btn:hover { background-color: #6c757d; color: white; }
+.modal { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+.modal-content { background-color: #fff; padding: 2rem; border-radius: 8px; width: 90%; max-width: 500px; position: relative; }
+.close-button { color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; }
+#form-edit label { display: block; margin-top: 1rem; margin-bottom: 0.25rem; font-weight: bold; text-transform: none; }
+#form-edit input { width: calc(100% - 1.5rem); }

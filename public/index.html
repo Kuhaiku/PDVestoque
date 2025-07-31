@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container">
+        <div class="card"><h2>Login</h2><form id="login-form"><input type="text" id="username" placeholder="Digite seu nome" required><button type="submit">Entrar</button></form></div>
+    </div>
+    <div id="app-container" class="hidden">
+        <header><h1>Estoque Pro</h1><div id="user-info"><span>Olá, <b id="user-name-display"></b></span><button id="logout-button">Sair</button></div></header>
+        <main>
+            <div id="operations-container" class="card-grid">
+                <div class="card"><h3>Registrar Entrada</h3><form id="form-entrada"><input type="text" id="entrada-nome" placeholder="Nome do Produto" required><input type="number" id="entrada-qtd" placeholder="Quantidade" required min="1"><input type="number" id="entrada-valor" placeholder="Valor Unitário (ex: 25.50)" required step="0.01" min="0.01"><input type="text" id="entrada-desc" placeholder="Descrição (opcional)"><button type="submit">Adicionar ao Estoque</button></form></div>
+                <div class="card"><h3>Carrinho de Venda</h3><form id="form-add-carrinho"><select id="saida-produto" required><option value="" disabled selected>-- Selecione um Produto --</option></select><input type="number" id="saida-qtd" placeholder="Quantidade" required min="1"><button type="submit">Adicionar ao Carrinho</button></form><hr><h4>Itens no Carrinho</h4><ul id="lista-carrinho"></ul><p>Total: <b id="carrinho-total">R$ 0.00</b></p><button id="btn-finalizar-venda" class="btn-success">Finalizar Venda</button></div>
+            </div>
+            <div id="display-container" class="card">
+                <div class="tabs"><button class="tab-button active" data-target="estoque-view">Ver Estoque</button><button class="tab-button" data-target="vendas-view">Relatório de Vendas</button></div>
+                <div id="estoque-view" class="tab-content active"><h3>Estoque Atual</h3><table id="tabela-estoque"><thead><tr><th>Produto</th><th>Quantidade</th><th>Valor Unit.</th><th>Descrição</th><th>Ações</th></tr></thead><tbody></tbody></table></div>
+                <div id="vendas-view" class="tab-content"><h3>Histórico de Vendas</h3><table id="tabela-vendas"><thead><tr><th>Data</th><th>Venda Nº</th><th>Valor Total</th><th>Vendedor</th><th>Ações</th></tr></thead><tbody></tbody></table></div>
+            </div>
+        </main>
+    </div>
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-content"><span class="close-button">&times;</span><h2>Editar Produto</h2><form id="form-edit"><input type="hidden" id="edit-id"><label for="edit-nome">Nome do Produto</label><input type="text" id="edit-nome" required><label for="edit-valor">Valor Unitário</label><input type="number" id="edit-valor" required step="0.01" min="0.01"><label for="edit-desc">Descrição</label><input type="text" id="edit-desc"><button type="submit">Salvar Alterações</button></form></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

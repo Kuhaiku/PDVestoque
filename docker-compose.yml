@@ -1,0 +1,20 @@
+# Versão do Docker Compose
+version: '3.8'
+
+# Definição dos serviços (containers)
+services:
+  # Serviço da sua Aplicação Node.js
+  app:
+    # Constrói a imagem a partir do Dockerfile na pasta atual
+    build: .
+    restart: always
+    ports:
+      # Mapeia a porta 3000 do seu computador para a porta 3000 do container
+      - "3000:3000"
+    environment:
+      # Passa as variáveis de ambiente do arquivo .env para a sua aplicação
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}

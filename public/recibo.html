@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Venda - Estoque Pro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="recibo.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="container" id="capture">
+        <div class="header">
+            <div class="logo">Estoque Pro<br><span id="header-contato"></span></div>
+            <div class="header-text">
+                <p id="header-endereco"></p>
+                <p id="header-cnpj"></p>
+            </div>
+        </div>
+
+        <div class="info-line">
+            <span><strong>Recibo Nº:</strong> <span id="recibo-id"></span></span>
+            <span><strong>Data:</strong> <span id="recibo-data"></span></span>
+        </div>
+        <div class="info-line">
+            <label><strong>Cliente:</strong> <input type="text" id="cliente-nome" placeholder="Nome do Cliente"></label>
+            <span><strong>Vendedor:</strong> <span id="recibo-vendedor"></span></span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Qtd</th>
+                    <th>Descrição</th>
+                    <th>V. Unitário</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="spacer"></div>
+
+        <div class="total-box">
+            Total: R$ <span id="total-geral">0.00</span>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button onclick="gerarImagem()">Salvar como Imagem</button>
+        <button onclick="window.print()">Imprimir</button>
+    </div>
+</div>
+
+<script src="recibo.js"></script>
+
+</body>
+</html>
