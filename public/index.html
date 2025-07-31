@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div id="login-container">
         <div class="card"><h2>Login</h2><form id="login-form"><input type="text" id="username" placeholder="Digite seu nome" required><button type="submit">Entrar</button></form></div>
     </div>
     <div id="app-container" class="hidden">
-        <header><h1>Estoque Pro</h1><div id="user-info"><span>Olá, <b id="user-name-display"></b></span><button id="logout-button">Sair</button></div></header>
+    
+        <header>
+            <a href="https://loja-mega-xerox.velmc0.easypanel.host/index.html" target="_self" style="display: inline-block; background-color: #007bff; color: white; padding: 12px 25px; text-align: center; text-decoration: none; font-weight: bold; font-family: Arial, sans-serif; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border: none; cursor: pointer;">Voltar</a>
+            <h1>Mega-Xerox</h1><div id="user-info"><span>Olá, <b id="user-name-display"></b></span><button id="logout-button">Sair</button></div></header>
         <main>
             <div id="operations-container" class="card-grid">
                 <div class="card"><h3>Registrar Entrada</h3><form id="form-entrada"><input type="text" id="entrada-nome" placeholder="Nome do Produto" required><input type="number" id="entrada-qtd" placeholder="Quantidade" required min="1"><input type="number" id="entrada-valor" placeholder="Valor Unitário (ex: 25.50)" required step="0.01" min="0.01"><input type="text" id="entrada-desc" placeholder="Descrição (opcional)"><button type="submit">Adicionar ao Estoque</button></form></div>
